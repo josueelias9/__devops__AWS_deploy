@@ -1,0 +1,10 @@
+services:
+  app:
+    image: python:3.11
+    container_name: remote-container
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:
+      - /home/ubuntu/josue/django:/root/django
+    ports:
+      - 3000:3000
